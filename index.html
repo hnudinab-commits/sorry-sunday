@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ง้อซันเดย์ 💗</title>
+
+<style>
+body {
+    margin: 0;
+    background: #ffd6e7;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #ff66a3;
+    color: white;
+    font-size: 16px;
+}
+
+.no {
+    position: absolute;
+}
+
+.hidden {
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box" id="main">
+    <h2>เค้าง้อซันเดย์นะ 🥺</h2>
+    <p>กลับมาดีกันนะ เค้าคิดถึงมากๆ 💕</p>
+
+    <button onclick="yes()">โอเค 💖</button>
+    <button class="no" id="noBtn" onmouseover="run()">ไม่เอา 😝</button>
+</div>
+
+<div class="box hidden" id="love">
+    <h2>เย้ 💗</h2>
+    <p>ซันเดย์น่ารักที่สุดเลย 🥺💕<br>เค้ารักซันเดย์นะ</p>
+</div>
+
+<script>
+function yes(){
+    document.getElementById("main").classList.add("hidden");
+    document.getElementById("love").classList.remove("hidden");
+}
+
+function run(){
+    let btn = document.getElementById("noBtn");
+    btn.style.left = Math.random()*200 + "px";
+    btn.style.top = Math.random()*200 + "px";
+}
+</script>
+
+</body>
+</html>
